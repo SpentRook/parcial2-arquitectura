@@ -5,9 +5,12 @@ import co.edu.unisabana.parcialarquitectura.repository.Database;
 
 public class Buy {
 
+  private Database database;
+  public Buy(Database database){
+    this.database = database;
+  }
 
   public String makePurchase(int vendorCode, int buyerCode, String item) {
-    Database database = new Database();
     if (buyerCode == vendorCode) {
       throw new IllegalSaleException(vendorCode, buyerCode);
     }
