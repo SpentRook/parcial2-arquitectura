@@ -28,7 +28,9 @@ jacocoTestReport {
             fileTree(dir: it, exclude: [
                     "**/dto/**",
                     "**/entity/*",
-                    "**/model/*"
+                    "**/model/*",
+                    "**/repository/*"
+
             ])
         }))
     }
